@@ -1,0 +1,9 @@
+python-dotenv
+azure-identity
+fastapi==0.118.0
+uvicorn==0.37.0
+fastmcp==2.12.4
+gunicorn==23.0.0
+azure-ai-projects==1.1.0b4
+mcp
+flask

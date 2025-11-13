@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>プロンプト入力</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <h1>AIに質問</h1>
+        <form id="promptForm" action="/prompt" method="POST">
+            <textarea id="prompt" name="prompt" rows="4" cols="50" placeholder="ここにプロンプトを入力"></textarea><br>
+            <div id="errorMsg" class="error"></div>
+            <button type="submit">送信</button>
+        </form>
+        <h2>回答</h2>
+        <div id="answerBox" class="answer-box">
+            <!-- AIの回答をここに表示 -->
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/prompt-form-handler.js') }}"></script>
+    </body>
+</html>

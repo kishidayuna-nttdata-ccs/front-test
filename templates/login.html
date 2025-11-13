@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ログインページ</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>ログイン</h1>
+            <form id="loginForm" action="/login" method="POST" >
+                <label>ユーザー名:
+                    <input type="text" name="username" id="username">
+                </label>
+                <label>パスワード:
+                    <input type="password" name="password" id="password">
+                </label>
+                <div id="errorMsg" class="error"></div>
+                <button type="submit">ログイン</button>
+                
+            </form>
+        </div>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/login-form-handler.js') }}"></script>
+    </body>
+</html>
