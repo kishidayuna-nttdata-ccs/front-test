@@ -1,6 +1,5 @@
 python-dotenv
 azure-identity
-azure-identity
 azure-ai-ml
 fastapi==0.118.0
 uvicorn==0.37.0
