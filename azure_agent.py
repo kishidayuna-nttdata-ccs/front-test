@@ -61,7 +61,4 @@ def ask_azure_agent(user_query):
                 last_text = msg.text_messages[-1]
                 return_message = last_text.text.value
                 last_message_id = msg.id
-        # Clean up messages
-        agents_client.messages.delete(thread_id=thread.id, message_id=message.id)
-        agents_client.messages.delete(thread_id=thread.id, message_id=last_message_id)
         return return_message
