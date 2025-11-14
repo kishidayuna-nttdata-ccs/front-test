@@ -36,9 +36,9 @@ def login():
         password = data["password"]
         if check_credentials(username, password):
             session["username"] = username
-            return redirect(url_for("home"))
+            return jsonify({"success": True}), 200
         else:
-            error = "Invalid username or password"
+            return jsonify({"success": False, "message": "IDまたはパスワードが正しくありません。"}), 401
     # GETまたは認証失敗時はlogin.htmlを表示
     return render_template("login.html", error=error)
 
